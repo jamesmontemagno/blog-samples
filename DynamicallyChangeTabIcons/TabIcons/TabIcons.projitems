@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{AF5F6DFA-1336-489A-A89D-6AFF6630EE18}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>TabIcons</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TabIconsPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TabIconsPage2.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TabIconsPage.xaml.cs">
+      <DependentUpon>TabIconsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Tab1ViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIconChange.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Tab2ViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TabIconsPage2.xaml.cs">
+      <DependentUpon>TabIconsPage2.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+  </ItemGroup>
+</Project>
