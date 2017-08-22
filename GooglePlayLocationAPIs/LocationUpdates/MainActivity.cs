@@ -166,9 +166,15 @@ namespace LocationUpdates
 
 			try
 			{
+				//Check our state here to ensure location is turned on
 				await settingsClient.CheckLocationSettingsAsync(locationSettingsRequest);
-				await fusedLocationClient.RequestLocationUpdatesAsync(locationRequest, locationCallback);
+
+				//Subscribe for location changes
 				locationCallback.LocationUpdated += OnLocationResult;
+
+				await fusedLocationClient.RequestLocationUpdatesAsync(locationRequest, locationCallback);
+
+				//If success then we can update the UI
 				requestingUpdates = true;
 				UpdateUI();
 			}
@@ -195,6 +201,11 @@ namespace LocationUpdates
 						break;
 				}
 			}
+			catch(Exception ex2)
+			{
+				var message = $"Unknown error occured.";
+				Toast.MakeText(this, message, ToastLength.Long).Show();
+			}
 		}
 		
 		void StopLocationUpdates()
@@ -209,7 +220,6 @@ namespace LocationUpdates
 				locationCallback.LocationUpdated -= OnLocationResult;
 				requestingUpdates = false;
 				UpdateUI();
-
 			}, TaskScheduler.FromCurrentSynchronizationContext());
 
 		}
