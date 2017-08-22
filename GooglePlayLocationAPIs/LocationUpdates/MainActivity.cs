@@ -17,7 +17,7 @@ using Android.Support.V4.Content;
 using Android.Gms.Common.Apis;
 using Debug = System.Diagnostics.Debug;
 
-namespace BlankAppCompat
+namespace LocationUpdates
 {
     [Activity(Label = "Location Updates", 
 		MainLauncher = true,
