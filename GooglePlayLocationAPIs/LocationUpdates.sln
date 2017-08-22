@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationUpdates", "LocaitonUpdates\LocationUpdates.csproj", "{E033292C-1101-44F4-867D-083EF8DB215F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationUpdates", "LocationUpdates\LocationUpdates.csproj", "{E033292C-1101-44F4-867D-083EF8DB215F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B10D3B1-5E45-46D6-A30A-DBDDDF9918BA}"
 	ProjectSection(SolutionItems) = preProject
