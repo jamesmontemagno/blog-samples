@@ -217,10 +217,12 @@ namespace LocationUpdates
 
 			fusedLocationClient.RemoveLocationUpdatesAsync(locationCallback).ContinueWith((r) =>
 			{
-				locationCallback.LocationUpdated -= OnLocationResult;
-				requestingUpdates = false;
-				UpdateUI();
+				//nothing to do here
 			}, TaskScheduler.FromCurrentSynchronizationContext());
+
+			locationCallback.LocationUpdated -= OnLocationResult;
+			requestingUpdates = false;
+			UpdateUI();
 
 		}
 
