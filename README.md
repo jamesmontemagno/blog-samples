@@ -1,6 +1,6 @@
-## MotzCod.es Samples
+## Blog Post Samples
 
-Sample from http://motzcod.es
+Sample from http://motzcod.es and http://blog.xamarin.com
 
 
 ### Created By: [@JamesMontemagno](http://twitter.com/jamesmontemagno)
